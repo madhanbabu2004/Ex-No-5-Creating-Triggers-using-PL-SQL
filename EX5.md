@@ -76,3 +76,4 @@ SELECT * FROM sal_log;
 ![output](./a.png)
 
 ### Result:
+Thus the program for creating triggers has been implemented successfully.
