@@ -29,8 +29,7 @@ old_salary NUMBER,
 update_date DATE
 );
 -- Insert the values in the employee table
-insert into employe values(1,'Kar','IT',1000000);
-insert into employe values(2,'Boha’, 'SALES',500000);
+insert into employye values(1,23,'MASDHIN',20000,40000);
 
 ```
 ### Create employee table
