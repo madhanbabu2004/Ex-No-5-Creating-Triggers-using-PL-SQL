@@ -46,8 +46,8 @@ BEFORE UPDATE ON employe
 FOR EACH ROW
 BEGIN
 IF :0LD.salary != :NEW.salary THEN
-INSERT INTO sal_log (empid, empname, old_salary, new_salary, update_date)
-VALUES (:OLD.empid, :OLD.empname, :0LD.salary, :NEW.salary, SYSDATE);
+INSERT INTO sal_log (empyyoid, employeename, old_salary, new_salary, update_date)
+VALUES (:OLD.empid, :OLD.employeename, :0LD.salary, :NEW.salary, SYSDATE);
 END IF;
 END;
 
@@ -58,13 +58,13 @@ END;
 insert into employye values(1,23,'MASDHIN',20000,40000);
 
 -- Update the salary of an employee
-UPDATE employe
+UPDATE employye
 
 SET salary = 68000
 
 WHERE empid = 1;
 
--- Display the employee table
+-- Display the employye table
 SELECT * FROM employye;
 
 -- Display the salary_log table
