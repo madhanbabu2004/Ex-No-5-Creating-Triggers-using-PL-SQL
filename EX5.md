@@ -14,17 +14,17 @@
 
 ### Program:
 ```
-CREATE TABLE employe(
-empid NUMBER,
-empname VARCHAR2(10),
+CREATE TABLE employye(
+empyyoid NUMBER,
+employeename VARCHAR2(10),
 dept VARCHAR2(10),
 salary NUMBER
 );
 
 CREATE TABLE salary_log(
 log_id NUMBER GENERATED ALWAYS AS IDENTITY,
-empid NUMBER,
-empname VARCHAR2(18),
+empyyoid NUMBER,
+employeename VARCHAR2(10),
 old_salary NUMBER,
 update_date DATE
 );
@@ -34,10 +34,10 @@ insert into employe values(2,'Boha’, 'SALES',500000);
 
 ```
 ### Create employee table
-![output](./c.png)
+![output](./b.png)
 
 ### Create salary_log table
-![output](./z.png)
+![output](./c.png)
 
 ### PLSQL Trigger code
 ```
@@ -56,8 +56,7 @@ END;
 
 -- Insert the values in the employee table
 
-insert into employe values(1,'Kar','IT',1000000);
-insert into employe values(2,'Boha’, 'SALES',500000);
+insert into employye values(1,23,'MASDHIN',20000,40000);
 
 -- Update the salary of an employee
 UPDATE employe
@@ -67,7 +66,7 @@ SET salary = 68000
 WHERE empid = 1;
 
 -- Display the employee table
-SELECT * FROM employe;
+SELECT * FROM employye;
 
 -- Display the salary_log table
 SELECT * FROM sal_log;
